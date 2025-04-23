@@ -19,7 +19,7 @@ app.get('/', (req, res) => {
   ctx.font = 'bold 50px Arial';
   ctx.textAlign = 'center';
 
-  const maxWidth = width - 40; // margem lateral
+  const maxWidth = width - 40;
   const lineHeight = 60;
   const words = text.split(' ');
   const lines = [];
@@ -42,7 +42,6 @@ app.get('/', (req, res) => {
     lines.push(currentLine.trim());
   }
 
-  // Centraliza verticalmente
   const startY = height / 2 - (lines.length * lineHeight) / 2;
 
   lines.forEach((line, i) => {
@@ -54,5 +53,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-  console.log(`Servidor rodando em http://localhost:${PORT}/?api=texto`);
+  console.log(` http://localhost:${PORT}/?api=texto`);
 });
