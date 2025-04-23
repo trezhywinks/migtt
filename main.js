@@ -4,6 +4,10 @@ const { createCanvas } = require('canvas');
 const app = express();
 const PORT = 9595;
 
+app.get('/server', (req, res) => {
+res.sendFile(__dirname + '/server/index.html')
+})
+
 app.get('/', (req, res) => {
   const text = req.query.api || 'Erro :(';
 
