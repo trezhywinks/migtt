@@ -52,7 +52,7 @@ app.get('/', (req, res) => {
     ctx.fillText(line, width / 2, startY + i * lineHeight);
   });
 
-  res.setHeader('Content-Type', 'image/png');
+  res.setHeader('Content-Type', 'image/webp');
   canvas.pngStream().pipe(res);
 });
 
